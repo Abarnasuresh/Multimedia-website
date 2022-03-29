@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Music Gallery Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        *{
+    margin: 0; padding:0;
+    box-sizing:border-box;
+}
+html{
+    font-size:62.5%
+}
+.container{
+    background:greenyellow;  
+}
+.container {
+    font-size:3rem;
+    padding:2rem 0;
+    text-align:center;
+    font-family:Verdana,Geneva,Tahona,sans-serif;  
+    color:none; 
+}  
+.container .music-container{
+    display:flex;
+    align-items:center;
+    flex-flow:column;
+}  
+.container .music-container .box{
+    height:16rem;
+    width:80%;
+    display:flex;
+    align-items:center;
+    background:none;
+    border-radius:1rem;
+    box-shadow: 0 .5rem 1rem #000;
+    overflow:hidden;
+    margin:2rem;
+} 
+.container .music-container .box .image{
+    height:100%;
+    width:25%;   
+}
+.container .music-container .box .image img{
+    height:100%;
+    width: 100%; 
+    object-fit:cover;
+}
+.container .music-container .box .music{
+    width:75;
+}
+.container .music-container .box .music audio{
+    width:100%;
+    outline:none;
+} 
+.container .music-container .box .music audio::-webkit-media-controls-enclosure {
+    width:100%;
+    outline:none;
+} 
+.container .music-container .box .music audio::-webkit-media-controls-enclosure{
+    background: none;
+}
+@media (max-width:600px){
+    .container .music-container .box{
+        height:27rem;
+        width:90%;
+        flex-flow:column;
+    } 
+    .container .music-container .box .image{
+        height:80%;
+        width:100%;
+    }
+    container .music-container .box .music{
+        height:20%;
+        width:100%;
+    }
+
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="heading" style="color:white;">Music Gallery</div>
+        <div class="music-container">
+            <div class="box">
+                <div class="image">
+                    <img src="photo6192669416186031497.jpg" alt=""> 
+                </div>
+                <!-- <div class="music">
+                    <audio src="What is the Internet_(MP3_320K).mp3" controls></audio>
+                </div> -->
+                <audio controls style="width:100%">
+                    <source src="stay.mp3" type="audio/ogg">
+                    <source src="stay.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="photo6192669416186031498.jpg" alt="">
+                </div>
+                <!-- <div class="music">
+                    <audio src="RAM Vs. ROM _ Animation(MP3_320K).mp3" controls></audio>
+                </div> -->
+                <audio controls style="width:100%">
+                    <source src="stay.mp3" type="audio/ogg">
+                    <source src="stay.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="photo6192669416186031499.jpg" alt="">
+                </div>
+            <!-- <div class="music">
+                <audio  controls autoplay>
+                    <source src="stay.mp3" type="audio/ogg">
+                    <source src="stay.mp3" type="audio/mpeg">
+                </audio>
+            </div> -->
+            <audio controls style="width:100%">
+                <source src="stay.mp3" type="audio/ogg">
+                <source src="stay.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio>
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>
